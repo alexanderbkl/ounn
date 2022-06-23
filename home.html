@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Sticky header on scroll up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,400i,700'>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <header class="top-menu-bar" data-scroll>
+    <img src="images/logo-dark.png" alt="_" class="logo" id="logo-dark">
+    <img src="images/logo.png" alt="_" class="logo" id="logo-white">
+
+    <ul id="li-top-menu" style="list-style: none;">
+      <li>
+        <a href="#header">Aave Protocol</a>
+        <a href="#about">Governance</a>
+        <a href="#features">Docs</a>
+        <a href="#courses">Security</a>
+        <a href="#offer">FAQ</a>
+      </li>
+    </ul>
+    <!--Launch App button-->
+    <button class="btn-launch-app">
+      <a id="a-launch-app" href="#">Launch App</a></button>
+
+    <div class="menuBtn">
+      <img src="images/menu.png" class="menuBtn" alt="_" id="menuBtn">
+    </div>
+
+    <!--Side Navigation Bar-->
+    <nav id="sideNav" data-scroll>
+
+      <ul class="sideNavContainer">
+        <li id="sideNavFirst">
+          <button"><a href="#header">Aave Protocol</a></button>
+        </li>
+        <li><a href="#about">Governance</a></li>
+        <li><a href="#features">Docs</a></li>
+        <li><a href="#courses">Security</a></li>
+        <li><a href="#offer">FAQ</a></li>
+      </ul>
+    </nav>
+    <!--Make the elements inside the nav with a nice design and hoverable-->
+    <style>
+      #sideNav li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        transition: all 0.3s ease-in-out;
+      }
+
+      #sideNav li:hover {
+        background-color: #fff;
+        color: #000;
+      }
+
+      #sideNav li:hover a {
+        background-color: #fff;
+        color: #000;
+      }
+
+      #sideNav li:last-child {
+        border-bottom: none;
+      }
+    </style>
+  </header>
+
+
+
+  <section class="header">
+    <canvas id="gradient-canvas"></canvas>
+    </canvas>
+    <script src="js/gradient.js"></script>
+
+    <div class="cuntainer">
+
+      <div class="header-text">
+        <p class="title">YOUR <b>ounn</b> PRIVATE DATA MANAGER<br />
+        <p>
+          <b>POWERED BY BLOCKCHAIN.</b>
+        </p>
+
+
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+  <!-- partial:index.partial.html -->
+<button id="btn">RESTART</button>
+<div id="progress-bar-container">
+		<div class="progress-bar-child progress"></div>
+		<div class="progress-bar-child shrinker timelapse"></div>
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="js/progress-bar.js"></script>
+
+
+
+  <!-- about -->
+
+  <section id="about">
+
+
+    <div class="about-left-col">
+      <img src="images/phrase.jpg" alt="_">
+    </div>
+    <div class="about-right-col">
+      <div class="about-text">
+        <h1>About Us</h1>
+        <p style="font-size: 2rem;">In the end, we all want to have the <span
+            style="color:rgb(149, 223, 252)">#control</span> right? <br />To have our <b>ounn.space</b>.</p>
+        <br /><br />
+
+
+        <p>"Learning is not attained by chance, it must be sought for with ardor and attended to with diligence"</p>
+        <h3>-Abigail Adams</h3>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuBtn = document.getElementById("menuBtn");
+    var sideNav = document.getElementById("sideNav");
+
+    sideNav.style.right = "-250px";
+    menuBtn.onclick = function () {
+      if (sideNav.style.right === "-250px") {
+        sideNav.style.right = "0";
+      } else {
+        sideNav.style.right = "-250px";
+      }
+    }
+
+    //if any element of the screen is clicked, the side nav should be closed
+    document.addEventListener("click", function (event) {
+      if (event.target.id !== "menuBtn" && event.target.id !== "sideNav") {
+        sideNav.style.right = "-250px";
+      }
+    });
+
+  </script>
+
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 1000,
+      speedAsDuration: true
+    });
+  </script>
+
+
+
+
+  <script src='https://unpkg.com/scroll-out/dist/scroll-out.min.js'></script>
+  <script src="js/nav-scroll.js"></script>
+
+</body>
+
+</html>
