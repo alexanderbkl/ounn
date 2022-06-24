@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Arial;
+  }
+  
+  .title {
+  
+    font-family: 'Inter', Arial;
+    font-weight: 500;
+    letter-spacing: 0.25rem;
+    line-height: 2.46875rem;
+    font-size: 1.525rem;
+    margin-bottom: 16px;
+  }
+  
+  #wrapper {
+    position: relative;
+    height: 200px;
+  }
+  
+  
+  
+  .background {
+    color: #999999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+  }
+  
+  body {
+    margin: 0px;
+    color: rgb(241, 241, 243);
+    background-color: rgb(27, 32, 48);
+  }
+  
+  .header {
+    position: relative;
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    z-index: 58;
+  
+  }
+  
+  .container {
+    margin-right: 100px;
+    margin-left: 100px;
+    position: absolute;
+  }
+  
+  .cuntainer {
+    margin-right: 100px;
+    margin-left: 100px;
+    position: absolute;
+    bottom: 10vh;
+  }
+  
+  .top-menu-bar {
+    vertical-align: middle;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    /*center horizontally*/
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    transition: transform 400ms cubic-bezier(.25, .37, .17, .96);
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    z-index: 59;
+  }
+  
+  a {
+    vertical-align: middle;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  
+  
+  .header-text {
+    max-width: 650px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    letter-spacing: 0.20rem;
+    line-height: 1.5rem;
+    font-size: 1.625rem;
+  }
+  
+  /*HIDE TOP BAR ON SCROLL*/
+
+
+  /* When header is not in viewport we hide it */
+  .top-menu-bar[data-scroll="out"] {
+    /*transform: translatey(-100%);*/
+  }
+  
+  /* When moving up and header we show it */
+  [data-scroll-dir-y="-1"] .top-menu-bar {
+    /*transform: translatey(0%);*/
+    background-color: aliceblue;
+  }
+  
+  [data-scroll-dir-y="-1"] .top-menu-bar  {
+    /*transform: translatey(0%);*/
+    background-color: aliceblue;
+  }
+  
+  [data-scroll-dir-y="-1"] .top-menu-bar ul a {
+    /*transform: translatey(20%);*/
+    color: rgb(0, 0, 0)
+  }
+  
+  
+  
+  [data-scroll-dir-y="-1"] .top-menu-bar #a-launch-app {
+    color: rgb(219, 219, 219);
+  }
+  
+  [data-scroll-dir-y="-1"] .top-menu-bar #sideNav ul li a {
+    color: rgb(255, 255, 255);
+  }
+  
+  [data-scroll-dir-y="-1"] .top-menu-bar #logo-white {
+    visibility: hidden;
+    background-color: rgb(62, 15, 75);
+  }
+  
+  /*If .top-menu-bar scroll is on top, make the background transparent*/
+  
+  .logo {
+    position: absolute;
+    vertical-align: middle;
+    left: 5%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100px;
+  }
+  
+  
+  .btn-launch-app {
+    position: absolute;
+    right: 17%;
+    bottom: 0;
+    top: 10%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(27, 32, 48);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    height: 6vh;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+  }
+  .btn-launch-app a {
+    position: sticky;
+    color: rgb(58, 58, 58);
+
+  }
+
+  
+  
+  #menuBtn {
+    position: absolute;
+    top: 15%;
+    bottom: 0;
+    vertical-align: middle;
+    width: 45px;
+    right: 5%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    cursor: pointer;
+    z-index: 61;
+  }
+  
+  
+  /*When screen width is smaller than 720px, align text to center inside .header-text*/
+  @media screen and (max-width: 720px) {
+    .header-text {
+      text-align: center;
+    }
+  }
+  
+  /*When screen width is smaller than 1100px, set margin right to 100 px of #li-top-menu*/
+  @media screen and (max-width: 1100px) {
+    #li-top-menu {
+      margin-right: 100px;
+    }
+  }
+  
+  
+  @media screen and (max-width: 960px) {
+    #li-top-menu {
+      visibility: hidden;
+  
+    }
+  
+    .top-menu-bar {
+      background-color: transparent;
+    }
+  
+    #menuBtn {
+      visibility: visible;
+    }
+  
+  }
+  
+  @media screen and (min-width: 960px) {
+    #menuBtn {
+      visibility: hidden;
+    }
+    .btn-launch-app {
+      right: 5%;
+    }
+  }
+  
+  h1 {
+    font-size: 34px;
+    color: white;
+  }
+  
+  .square {
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background: #444444;
+    margin: 15px 0;
+  }
+  
+  .common-btn {
+    padding: 18px 40px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #444444;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  p {
+    font-size: 20px;
+    line-height: 2rem;
+    color: rgb(255, 255, 255);
+  }
+  
+  .header-text button {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    /*rounded corners*/
+    border-radius: 5px;
+    /*border*/
+    border: 1px solid #444444;
+  }
+  
+  
+  #sideNav {
+    width: 250px;
+    height: 110vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: rgb(15, 182, 0);
+  
+    background: linear-gradient(331deg, #50748da6 0%, #e9f2d783 59%);
+  transition: 0.5s;
+  }
+  #sideNav #sideNavFirst {
+    margin-top: 20vh;
+  }
+  
+  #sideNav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #sideNav li:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  #sideNav li:hover a {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  #sideNav li:last-child {
+    border-bottom: none;
+  }
+  
+  nav ul li {
+    list-style: none;
+    margin: 50px 20px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .tabs-progress {
+    margin-left: auto;
+    margin-right: auto;
+    width: 45vw;
+    height: 20vh;
+  }
+  
+  #progress-bar-container {
+    width: 100%;
+    height: 2px;
+    margin: 0 auto;
+    position: relative;
+    transform: translateY(-50%);
+    border-radius: 35px;
+    overflow: hidden;
+  }
+  
+  .progress-bar-child {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .progress {
+    color: white;
+    text-align: center;
+    line-height: 75px;
+    font-size: 35px;
+    font-family: "Segoe UI";
+    animation-direction: reverse;
+    background: #e5405e;
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #5b7792 0%, #e9f2d7 100%);
+  }
+  
+  .shrinker {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+  
+  .timelapse {
+    animation-name: timelapse;
+    animation-fill-mode: forwards;
+    animation-duration: 10s;
+    animation-timing-function: cubic-bezier(0.09, 0.005, 0.004, 0.007);
+  }
+  
+  @keyframes timelapse {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  
+  
+  
+  
+  /* ---- about ---- */
+  #about,
+  #offer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .about-left-col {
+    flex-basis: 50%;
+  }
+  
+  .about-left-col img {
+    margin: 10vw;
+    width: 80%;
+  }
+  
+  .about-right-col {
+    flex-basis: 50%;
+    text-align: right;
+  }
+  
+  .about-text {
+    margin-top: 100px;
+    font-family: 'Inter', Arial;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    line-height: 3.46875rem;
+    font-size: 1.525rem;
+    
+    max-width: 500px;
+    margin-right: 100px;
+    display: inline-block;
+  }
+  
+  .about-text h2 {
+    margin: 50px 0 10px;
+    font-size: 28px;
+    font-style: italic;
+  }
+  
+  .about-text h3 {
+    font-size: 20px;
+    font-style: italic;
+    color: #797979;
+  }
+
+  .about-text p {
+    line-height: 2.46875rem;
+
+  }
+  
+  /* ---- features ---- */
+  #features {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .feature-row {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .feature-col {
+    flex-basis: 25%;
+    text-align: center;
+  }
+  
+  .feature-col img {
+    width: 100px;
+  }
+  
+  .feature-col h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .feature-btn {
+    margin: 80px auto 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .feature-btn .line {
+    text-align: right;
+    display: inline-block;
+    margin-right: 25px;
+  }
+  
+  /* ---- courses ---- */
+  #courses {
+    padding: 100px 0;
+  }
+  
+  .course-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .course-left-col,
+  .course-right-col {
+    flex-basis: 50%;
+  }
+  
+  .course-text {
+    max-width: 350px;
+  }
+  
+  .course-text button {
+    margin: 30px 0;
+  
+  }
+  
+  .course-right-col img {
+    width: 100%;
+  }
+  
+  /* ---- offer ---- */
+  #offer button {
+    margin: 30px 0;
+  }
+  
+  /* ---- contact ---- */
+  .contact-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .contact-left-col,
+  .contact-right-col {
+    flex-basis: 50%;
+  }
+  
+  .contact-right-col img {
+    width: 100%;
+  }
+  
+  form {
+    max-width: 350px;
+    margin: 30px 0;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 12px 10px;
+    margin-bottom: 5px;
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    border: 2px solid #fab3c4;
+  }
+  
+  #gradient-canvas {
+    width: 100vw;
+    height: 60vh;
+    --gradient-color-1: #9d84b7;
+    --gradient-color-2: #b2f9fc;
+  
+    --gradient-color-3: #8a75a1;
+    --gradient-color-4: #83bbbd;
+  }
+  
+  .btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-box button {
+    flex-basis: 48%;
+    padding: 18px 0;
+  }
+  
+  /* ---- footer ---- */
+  #footer {
+    padding: 50px 0 30px;
+  }
+  
+  hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #444444;
+  }
+  
+  .footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left-col {
+    flex-basis: 50%;
+    margin-top: 60px;
+  }
+  
+  .footer-right-col {
+    flex-basis: 35%;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .link-title h4 {
+    color: #fab3c4;
+    margin-bottom: 20px;
+  }
+  
+  .link-title small {
+    font-size: 13px;
+    color: #777;
+  }
+  
+  .footer-info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo img {
+    width: 100px;
+  }
+  
+  .footer-logo button {
+    padding: 12px 38px;
+    margin-top: 20px;
+    font-size: 10px;
+  }
+  
+  .copyright-text,
+  .footer-logo {
+    flex-basis: 40%;
+  }
+  
+  /* ---- social-icons ---- */
+  .social-icons {
+    width: 50px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .social-icons img {
+    display: block;
+    width: 20px;
+    margin: 0 auto 20px;
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 770px) {
+    .header {
+      background-image: none;
+    }
+  
+    .container {
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+  
+  
+  
+    h1 {
+      font-size: 25px;
+    }
+  
+    .common-btn {
+      padding: 10px 16px;
+    }
+  
+    .social-icons img {
+      width: 14px;
+      margin: 15px auto;
+    }
+  
+    .about-left-col,
+    .about-right-col {
+      flex-basis: 100%;
+    }
+  
+    .about-text {
+      margin: 50px 50px 0;
+      display: inline-block;
+
+    }
+  
+
+  
+    .feature-col {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .course-left-col {
+      flex-basis: 100%;
+    }
+  
+    .course-right-col {
+      flex-basis: 100%;
+      margin-top: 70px;
+    }
+  
+    .contact-left-col,
+    .contact-right-col {
+      flex-basis: 100%;
+    }
+  
+    .contact-right-col {
+      margin-top: 50px;
+    }
+  
+    .footer-left-col,
+    .footer-right-col {
+      flex-basis: 100%;
+    }
+  
+    .link-title {
+      flex-basis: 50%;
+      margin-bottom: 30px;
+    }
+  }
+  

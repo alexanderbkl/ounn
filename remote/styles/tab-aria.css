@@ -1,0 +1,75 @@
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.tab-area {
+  padding-bottom: 300px;
+  height: 20vh;
+}
+
+.tab-group {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.tab {
+  border: none;
+  width: 15vw;
+  height: 50px;
+  text-align: center;
+  background-color: transparent;
+  color: rgb(192, 192, 192);
+  font-family: "Teko", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+.tab[aria-selected=true] {
+  font-weight: bolder;
+  color: #fff;
+  transition-property: color, background-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+}
+
+.panel-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.panel-block {
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px 0;
+  color: rgb(189, 0, 0);
+  font-family: 'Inter', Arial;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  line-height: 1,46875rem;
+  font-size: 1.025rem;
+}
+.panel-block[aria-hidden=false] {
+  display: block;
+  color: #fff;
+  -webkit-animation: show 0.4s ease;
+          animation: show 0.4s ease;
+}/*# sourceMappingURL=tab-aria.css.map */

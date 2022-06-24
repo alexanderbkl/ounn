@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <title>CodePen - Sticky header on scroll up</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,400i,700'>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/tab-aria.css">
+  <link rel="stylesheet" href="styles/style.css">
 
 </head>
 
 <body>
   <!-- partial:index.partial.html -->
-  <header class="top-menu-bar" data-scroll>
+  <header id="top-menu-bar" class="top-menu-bar" data-scroll>
     <img src="images/logo-dark.png" alt="_" class="logo" id="logo-dark">
-    <img src="images/logo.png" alt="_" class="logo" id="logo-white">
 
     <ul id="li-top-menu" style="list-style: none;">
       <li>
@@ -26,8 +26,8 @@
       </li>
     </ul>
     <!--Launch App button-->
-    <button class="btn-launch-app">
-      <a id="a-launch-app" href="#">Launch App</a></button>
+    <button id="btn-launch-app" class="btn-launch-app">
+      Launch App</button>
 
     <div class="menuBtn">
       <img src="images/menu.png" class="menuBtn" alt="_" id="menuBtn">
@@ -46,37 +46,6 @@
         <li><a href="#offer">FAQ</a></li>
       </ul>
     </nav>
-    <!--Make the elements inside the nav with a nice design and hoverable-->
-    <style>
-      #sideNav li {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        font-size: 1.5em;
-        font-weight: bold;
-        color: #fff;
-        border-bottom: 1px solid #fff;
-        transition: all 0.3s ease-in-out;
-      }
-
-      #sideNav li:hover {
-        background-color: #fff;
-        color: #000;
-      }
-
-      #sideNav li:hover a {
-        background-color: #fff;
-        color: #000;
-      }
-
-      #sideNav li:last-child {
-        border-bottom: none;
-      }
-    </style>
   </header>
 
 
@@ -100,21 +69,42 @@
     </div>
 
   </section>
+  <section id="tabaria">
+    <div class="tabs-progress">
+      <!-- partial:index.partial.html -->
+      
+     
+      <div class="tab-area">
+        <ul class="tab-group" role="tablist">
+          <li role="presentation">
+            <button class="tab" role="tab" aria-controls="panel01" aria-selected="true">Supply</button>
+          </li>
+          <li role="presentation">
+            <button class="tab" role="tab" aria-controls="panel02" aria-selected="false">Stake</button>
+          </li>
+          <li role="presentation">
+            <button class="tab" role="tab" aria-controls="panel03" aria-selected="false">Borrow</button>
+          </li>
+        </ul>
+        <div id="progress-bar-container">
+          <div class="progress-bar-child progress"></div>
+          <div class="progress-bar-child shrinker timelapse"></div>
+        </div>
+        <div class="panel-group">
+          <div class="panel-block" id="panel01" role="tabpanel" aria-hidden="false">Content A</div>
+          <div class="panel-block" id="panel02" role="tabpanel" aria-hidden="true">Content B</div>
+          <div class="panel-block" id="panel03" role="tabpanel" aria-hidden="true">Content C</div>
+        </div>
+      </div>
 
-  <!-- partial:index.partial.html -->
-<button id="btn">RESTART</button>
-<div id="progress-bar-container">
-		<div class="progress-bar-child progress"></div>
-		<div class="progress-bar-child shrinker timelapse"></div>
-</div>
-<!-- partial -->
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="js/progress-bar.js"></script>
+    </div>
+  </section>
 
 
 
   <!-- about -->
 
-  <section id="about">
+  <section style="margin-top: 10px;" id="about">
 
 
     <div class="about-left-col">
@@ -128,8 +118,6 @@
         <br /><br />
 
 
-        <p>"Learning is not attained by chance, it must be sought for with ardor and attended to with diligence"</p>
-        <h3>-Abigail Adams</h3>
       </div>
     </div>
   </section>
@@ -157,15 +145,39 @@
   </script>
 
   <script>
-    var scroll = new SmoothScroll('a[href*="#"]', {
-      speed: 1000,
-      speedAsDuration: true
-    });
+    function getYPosition() {
+      var top = window.pageYOffset || document.documentElement.scrollTop
+      return top;
+    }
+
+    function scrollListener(event) {
+      let bar = document.getElementById("top-menu-bar");
+      let btn = document.getElementById("btn-launch-app");
+      let a = document.getElementById("a-launch-app");
+      let offset = 0 // valor en el que quieras que el scroll cambie
+      if (getYPosition() > offset) {
+        bar.style.backgroundColor = "rgb(255, 255, 255)";
+        btn.style.backgroundColor = "rgb(0, 0, 0)";
+        a.style.color = "rgb(255, 255, 255)";
+      } else {
+        bar.style.backgroundColor = "rgba(0, 0, 0, 0)";
+        btn.style.backgroundColor = "rgb(255, 255, 255)";
+        a.style.color = "rgb(0, 0, 0)";
+
+      }
+
+
+    }
+
+    window.addEventListener('scroll', scrollListener)
   </script>
 
 
-
-
+ <!-- partial -->
+ <script src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
+ <script src="js/progress-bar.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="js/tabaria.js"></script>
   <script src='https://unpkg.com/scroll-out/dist/scroll-out.min.js'></script>
   <script src="js/nav-scroll.js"></script>
 
