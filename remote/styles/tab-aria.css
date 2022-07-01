@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+* {
+  font-family: 'Inter', Arial;
+  font-size: 1.5rem;
+}
 @-webkit-keyframes show {
   from {
     opacity: 0;
@@ -31,16 +36,18 @@
   border: none;
   width: 15vw;
   height: 50px;
+  font-family: 'Inter', Arial;
   text-align: center;
   background-color: transparent;
   color: rgb(192, 192, 192);
-  font-family: "Teko", sans-serif;
-  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
 }
 .tab[aria-selected=true] {
   font-weight: bolder;
   color: #fff;
+  font-family: 'Inter', Arial;
+  font-weight: 900;
   transition-property: color, background-color;
   transition-duration: 0.4s;
   transition-timing-function: ease;
@@ -60,16 +67,15 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: 100px 0;
-  color: rgb(189, 0, 0);
   font-family: 'Inter', Arial;
-  font-weight: 700;
-  letter-spacing: 0.15rem;
+  font-weight: 800;
   line-height: 1,46875rem;
-  font-size: 1.025rem;
+  font-size: 1.5rem;
+  color: rgb(124, 124, 124);
 }
 .panel-block[aria-hidden=false] {
   display: block;
-  color: #fff;
+  color: rgb(124, 124, 124);
   -webkit-animation: show 0.4s ease;
           animation: show 0.4s ease;
 }/*# sourceMappingURL=tab-aria.css.map */
