@@ -1,0 +1,622 @@
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Arial;
+    }
+  
+  .title {
+  
+    font-family: 'Inter', Arial;
+    font-weight: 500;
+    letter-spacing: 0.25rem;
+    line-height: 2.46875rem;
+    font-size: 2.525rem;
+    margin-bottom: 16px;
+  }
+
+  .title #app-name {
+    font-size: 3.5rem;
+    color: #f7f0ff;
+  }
+
+  .header-text p b {
+    font-size: 1.5rem;
+  }
+  
+  
+
+  body {
+    margin: 0px;
+    color: rgb(241, 241, 243);
+    background-color: rgb(27, 32, 48);
+    
+  }
+  
+  .header {
+    position: relative;
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    z-index: 58;
+  
+  }
+
+
+
+
+  
+  .cuntainer {
+    margin-right: 100px;
+    margin-left: 100px;
+    position: absolute;
+    bottom: 10vh;
+  }
+  .top-menu-bar {
+    vertical-align: middle;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    /*center horizontally*/
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    transition: transform 400ms cubic-bezier(.25, .37, .17, .96);
+    font-weight: bolder;
+    z-index: 59;
+    display: flex;
+    align-items: center;
+  }
+  
+  a {
+    vertical-align: middle;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-decoration: none;
+  }
+  
+  
+  .header-text {
+    max-width: 650px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    letter-spacing: 0.20rem;
+    line-height: 1.5rem;
+    font-size: 1.625rem;
+  }
+
+  #ul-top-menu {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-decoration: none;
+  }
+  
+  /*HIDE TOP BAR ON SCROLL*/
+
+
+  /* When header is not in viewport we hide it */
+  /*.top-menu-bar[data-scroll="out"] {
+    transform: translatey(-100%);
+  }*/
+  
+  /* When moving up and header we show it */
+  [data-scroll-dir-y="-1"] .top-menu-bar {
+    /*transform: translatey(0%);*/
+    background-color: aliceblue;
+  }
+  
+  [data-scroll-dir-y="-1"] .top-menu-bar  {
+    /*transform: translatey(0%);*/
+    background-color: aliceblue;
+  }
+
+  
+  [data-scroll-dir-y="-1"] .top-menu-bar #sideNav ul li a {
+    color: rgb(255, 255, 255);
+  }
+  
+  [data-scroll-dir-y="-1"] .top-menu-bar #logo-white {
+    visibility: hidden;
+    background-color: rgb(62, 15, 75);
+  }
+
+
+
+
+  .top-menu-bar ul li a {
+    /*transform: translatey(0%);*/
+    color: rgb(255,255,255);
+  }
+
+  /*If .top-menu-bar scroll is on top, make the background transparent*/
+  
+  .logo {
+    position: absolute;
+    vertical-align: middle;
+    left: 5%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100px;
+  }
+  
+  
+  .btn-launch-app {
+    position: absolute;
+    height: 35px;
+    right: 17%;
+    bottom: 0;
+    top: -15%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(27, 32, 48);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    color: rgb(58, 58, 58);
+  }
+
+  
+  
+  #menuBtn {
+    position: absolute;
+    top: -15%;
+    bottom: 0;
+    vertical-align: middle;
+    width: 45px;
+    right: 5%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    cursor: pointer;
+    z-index: 61;
+  }
+  
+  
+  /*When screen width is smaller than 720px, align text to center inside .header-text*/
+  @media screen and (max-width: 720px) {
+    .header-text {
+      text-align: center;
+    }
+  }
+  
+  /*When screen width is smaller than 1100px, set margin right to 100 px of #li-top-menu*/
+  @media screen and (max-width: 1100px) {
+    #li-top-menu {
+      margin-right: 100px;
+    }
+  }
+  
+  
+  @media screen and (max-width: 960px) {
+    #li-top-menu {
+      visibility: hidden;
+  
+    }
+  
+
+  
+    #menuBtn {
+      visibility: visible;
+    }
+  
+  }
+  
+  @media screen and (min-width: 960px) {
+    #menuBtn {
+      visibility: hidden;
+    }
+    .btn-launch-app {
+      right: 5%;
+    }
+  }
+  
+  h1 {
+    font-size: 34px;
+    color: white;
+  }
+  
+
+  .common-btn {
+    padding: 18px 40px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #444444;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  p {
+    font-size: 20px;
+    line-height: 2rem;
+    color: rgb(255, 255, 255);
+  }
+  
+  .header-text button {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    /*rounded corners*/
+    border-radius: 5px;
+    /*border*/
+    border: 1px solid #444444;
+  }
+  
+  
+  #sideNav {
+    width: 250px;
+    height: 110vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+
+    background: linear-gradient(331deg, #b2f9fce5 6%, #9d84b7e0 59%);
+  transition: 0.5s;
+  }
+  #sideNav #sideNavFirst {
+    margin-top: 20vh;
+  }
+  
+  #sideNav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #sideNav li:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  #sideNav li:hover a {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  #sideNav li:last-child {
+    border-bottom: none;
+  }
+  
+  nav ul li {
+    list-style: none;
+    margin: 50px 20px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .tabs-progress {
+    margin-left: auto;
+    margin-right: auto;
+    width: 45vw;
+    height: 20vh;
+  }
+  
+  
+  #progress-bar-container {
+    width: 100%;
+    height: 2px;
+    margin: 0 auto;
+    position: relative;
+    transform: translateY(-50%);
+    border-radius: 35px;
+    overflow: hidden;
+  }
+  
+  .progress-bar-child {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .progress {
+    color: white;
+    text-align: center;
+    line-height: 75px;
+    font-size: 35px;
+    font-family: "Segoe UI";
+    animation-direction: reverse;
+    background: #e5405e;
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #5b7792 0%, #e9f2d7 100%);
+  }
+  
+  .shrinker {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+  
+  .timelapse {
+    animation-name: timelapse;
+    animation-fill-mode: forwards;
+    animation-duration: 10s;
+    animation-timing-function: cubic-bezier(0.09, 0.005, 0.004, 0.007);
+  }
+  
+  @keyframes timelapse {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  
+  
+  
+  
+  /* ---- about ---- */
+  #about,
+  #offer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .about-left-col {
+    flex-basis: 50%;
+  }
+  
+  .about-left-col img {
+    margin: 10vw;
+    width: 80%;
+  }
+  
+  .about-right-col {
+    flex-basis: 50%;
+    text-align: right;
+  }
+  
+
+  
+  .about-text h2 {
+    margin: 50px 0 10px;
+    font-size: 28px;
+    font-style: italic;
+  }
+  
+  .about-text h3 {
+    font-size: 20px;
+    font-style: italic;
+    color: #797979;
+  }
+  .about-text p {
+    line-height: 2.46875rem;
+    padding-left: 30px;
+  }
+  /*if screen is less than 720px wide, .tabs-progress width is 100vw*/
+  @media screen and (max-width: 720px) {
+    .tabs-progress {
+      width: 60vw;
+    }
+    .tab {
+      width: 20vw;
+    }
+
+    .about-text {
+      margin-top: 100px;
+      font-family: 'Inter', Arial;
+      font-weight: 500;
+      letter-spacing: 0.05rem;
+      line-height: 3.46875rem;
+      font-size: 1.525rem;
+      
+      max-width: 500px;
+      margin-right: 100px;
+      display: inline-block;
+      margin: 5px 5px 0;
+      display: inline-block;
+
+    }
+
+    .about-text p {
+      padding-left: 0px;
+      text-align: justify;
+    }
+
+    .about-right-col {
+      text-align: center;
+    }
+
+  }
+
+  .line {
+    left: 0;
+    width: 100%;
+    height: 1px;
+    display: inline-block;
+    /*create a gradient background*/
+    background: linear-gradient(331deg, #b2f9fc 0%, #9d84b7 59%);
+    position: absolute;
+    border-radius: 2px;
+    margin-top: 10px;
+    z-index: -1;
+  }
+
+
+  .apart-circle {
+    position: absolute; 
+    transform: translateY(-30%);
+    left: 10;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(56, 61, 81);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: apart-circle;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    opacity: 1;
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+  
+  .apart-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-top: 50px;
+  }
+
+  .apart-paragraph {
+    font-size: 1.5rem;
+    line-height: 2.46875rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #979797;
+  }
+
+
+  form {
+    max-width: 350px;
+    margin: 30px 0;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 12px 10px;
+    margin-bottom: 5px;
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    border: 2px solid #fab3c4;
+  }
+  
+  #gradient-canvas {
+    width: 100%;
+    height: 60vh;
+    --gradient-color-1: #9d84b7;
+    --gradient-color-2: #b2f9fc;
+  
+    --gradient-color-3: #8a75a1;
+    --gradient-color-4: #83bbbd;
+  }
+  
+  .btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-box button {
+    flex-basis: 48%;
+    padding: 18px 0;
+  }
+  
+ 
+
+  @media only screen and (max-width: 770px) {
+    .header {
+      background-image: none;
+    }
+  
+    .container {
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+  
+  
+  
+    h1 {
+      font-size: 25px;
+    }
+  
+    .common-btn {
+      padding: 10px 16px;
+    }
+  
+    .social-icons img {
+      width: 14px;
+      margin: 15px auto;
+    }
+  
+    .about-left-col,
+    .about-right-col {
+      flex-basis: 100%;
+    }
+    .about-text {
+      margin-top: 100px;
+      font-family: 'Inter', Arial;
+      font-weight: 500;
+      letter-spacing: 0.05rem;
+      line-height: 3.46875rem;
+      font-size: 1.525rem;
+      
+      max-width: 500px;
+      margin-right: 100px;
+      display: inline-block;
+      margin: 5px 5px 0;
+      display: inline-block;
+
+    }
+  
+  
+
+  
+    .feature-col {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .course-left-col {
+      flex-basis: 100%;
+    }
+  
+    .course-right-col {
+      flex-basis: 100%;
+      margin-top: 70px;
+    }
+  
+    .contact-left-col,
+    .contact-right-col {
+      flex-basis: 100%;
+    }
+  
+    .contact-right-col {
+      margin-top: 50px;
+    }
+  
+    .footer-left-col,
+    .footer-right-col {
+      flex-basis: 100%;
+    }
+  
+    .link-title {
+      flex-basis: 50%;
+      margin-bottom: 30px;
+    }
+  }
+  

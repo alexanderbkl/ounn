@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+* {
+  font-family: 'Inter', Arial;
+  font-size: 1.5rem;
+}
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.tab-area {
+  padding-bottom: 300px;
+  height: 20vh;
+}
+
+.tab-group {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.tab {
+  border: none;
+  width: 15vw;
+  height: 50px;
+  font-family: 'Inter', Arial;
+  text-align: center;
+  background-color: transparent;
+  color: rgb(192, 192, 192);
+  font-weight: 700;
+  cursor: pointer;
+}
+.tab[aria-selected=true] {
+  font-weight: bolder;
+  color: #fff;
+  font-family: 'Inter', Arial;
+  font-weight: 900;
+  transition-property: color, background-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+}
+
+.panel-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.panel-block {
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px 0;
+  font-family: 'Inter', Arial;
+  font-weight: 800;
+  line-height: 1,46875rem;
+  font-size: 1.5rem;
+  color: rgb(124, 124, 124);
+}
+.panel-block[aria-hidden=false] {
+  display: block;
+  color: rgb(124, 124, 124);
+  -webkit-animation: show 0.4s ease;
+          animation: show 0.4s ease;
+}/*# sourceMappingURL=tab-aria.css.map */

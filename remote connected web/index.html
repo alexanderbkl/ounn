@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ounn - Your private data manager.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/tab-aria.css">
+  <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <header id="top-menu-bar" class="top-menu-bar" data-scroll>
+    <img src="images/logo-dark.png" alt="_" class="logo" id="logo-dark">
+
+    <ul id="ul-top-menu" style="list-style: none;">
+      <li id="li-top-menu">
+        <a href="#header">Aave Protocol</a>
+        <a href="#about">Governance</a>
+        <a href="#features">Docs</a>
+        <a href="#courses">Security</a>
+        <a href="#offer">FAQ</a>
+      </li>
+    </ul>
+    <!--Launch App button-->
+    <button id="btn-launch-app" class="btn-launch-app">
+      Launch App</button>
+
+    <div class="menuBtn">
+      <img src="images/menu.png" class="menuBtn" alt="_" id="menuBtn">
+    </div>
+
+    <!--Side Navigation Bar-->
+    <nav id="sideNav" data-scroll>
+
+      <ul class="sideNavContainer">
+        <li id="sideNavFirst">
+          <button"><a href="#header">Aave Protocol</a></button>
+        </li>
+        <li><a href="#about">Governance</a></li>
+        <li><a href="#features">Docs</a></li>
+        <li><a href="#courses">Security</a></li>
+        <li><a href="#offer">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="header">
+    <canvas id="gradient-canvas"></canvas>
+    </canvas>
+    <script src="js/gradient.js"></script>
+
+    <div class="cuntainer">
+
+      <div class="header-text">
+        <p class="title">YOUR <b id="app-name">ounn</b> PRIVATE DATA MANAGER<br />
+        <p>
+          <b>POWERED BY BLOCKCHAIN.</b>
+        </p>
+
+
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+  <div class="inner-body">
+
+
+
+    <div style="padding-top: 50px;" class="container">
+      <div class="row">
+        <div class="line">
+        </div>
+        <div class="apart col-sm-4">
+          <div class="apart-circle">1</div>
+          <p class="apart-title">Create your data wallet</p>
+          <p class="apart-paragraph">Create your wallet where will be stored your private data.</p>
+        </div>
+        <div class="line"></div>
+        <div class="apart col-sm-4">
+          <div class="apart-circle">2</div>
+          <p class="apart-title">Store your first password</p>
+          <p class="apart-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        </div>
+        <div class="line"></div>
+        <div class="apart col-sm-4">
+          <div class="apart-circle">3</div>
+          <p class="apart-title">Use it on anywhere anytime</p>
+          <p class="apart-paragraph">Your password will be there only for you and anywhere, as long as you have your
+            master password.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="tabs-progress">
+        <!-- partial:index.partial.html -->
+
+
+        <div class="tab-area">
+          <ul class="tab-group" role="tablist">
+            <li role="presentation">
+              <button class="tab" role="tab" aria-controls="panel01" aria-selected="true">Supply</button>
+            </li>
+            <li role="presentation">
+              <button class="tab" role="tab" aria-controls="panel02" aria-selected="false">Stake</button>
+            </li>
+            <li role="presentation">
+              <button class="tab" role="tab" aria-controls="panel03" aria-selected="false">Borrow</button>
+            </li>
+          </ul>
+          <div id="progress-bar-container">
+            <div class="progress-bar-child progress"></div>
+            <div class="progress-bar-child shrinker timelapse"></div>
+          </div>
+          <div class="panel-group">
+            <div class="panel-block" id="panel01" role="tabpanel" aria-hidden="false">World Content A Lorem ipsum dolor sit amet, coLorem ipsum dolor sit amet, consectetur adipisicing elit..nsectetur adipisicing elit..</div>
+            <div class="panel-block" id="panel02" role="tabpanel" aria-hidden="true">Content B Lorem ipsum dolor sit amet, consectetur adipiLorem ipsum dolor sit amet, consectetur adipisicing elit..sicing elit..</div>
+            <div class="panel-block" id="panel03" role="tabpanel" aria-hidden="true">Content C LoLorem ipsum dolor sit amet, consectetur adipisicing elit..rem ipsum dolor sit amet, consectetur adipisicing elit..</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container" style="margin-top: 10px;" id="about">
+
+
+      <!-- about -->
+
+      <div class="about-left-col">
+        <img src="images/phrase.jpg" alt="_">
+      </div>
+      <div class="about-right-col">
+        <div class="about-text">
+          <h1>About Us</h1>
+          <p style="font-size: 2rem;">In the end, we all want to have the <span
+              style="color:rgb(149, 223, 252)">#control</span> right? <br />To have our <b>ounn.space</b>.</p>
+          <br /><br />
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+
+  <script>
+    var menuBtn = document.getElementById("menuBtn");
+    var sideNav = document.getElementById("sideNav");
+
+    sideNav.style.right = "-250px";
+    menuBtn.onclick = function () {
+      if (sideNav.style.right === "-250px") {
+        sideNav.style.right = "0";
+      } else {
+        sideNav.style.right = "-250px";
+      }
+    }
+
+    //if any element of the screen is clicked, the side nav should be closed
+    document.addEventListener("click", function (event) {
+      if (event.target.id !== "menuBtn" && event.target.id !== "sideNav") {
+        sideNav.style.right = "-250px";
+      }
+    });
+
+  </script>
+
+  <script>
+    function getYPosition() {
+      var top = window.pageYOffset || document.documentElement.scrollTop
+      return top;
+    }
+
+    function scrollListener(event) {
+      let bar = document.getElementById("top-menu-bar");
+      let btn = document.getElementById("btn-launch-app");
+      let li = document.getElementById("li-top-menu");
+      let offset = 0 // valor en el que quieras que el scroll cambie
+      if (getYPosition() > offset) {
+        bar.style.backgroundColor = "rgb(255, 255, 255)";
+        btn.style.backgroundColor = "rgb(0, 0, 0)";
+        btn.style.color = "rgb(255, 255, 255)";
+        //get the list of li elements and change the color of the text
+        for (let i = 0; i < li.childElementCount; i++) {
+          li.children[i].style.color = "rgb(0, 0, 0)";
+        }
+      } else {
+        bar.style.backgroundColor = "rgba(0, 0, 0, 0)";
+        btn.style.backgroundColor = "rgb(255, 255, 255)";
+        btn.style.color = "rgb(0, 0, 0)";
+        for (let i = 0; i < li.childElementCount; i++) {
+          li.children[i].style.color = "rgb(255, 255, 255)";
+        }
+      }
+
+
+    }
+
+    window.addEventListener('scroll', scrollListener)
+  </script>
+
+
+  <!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+  <script src="js/progress-bar.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="js/tabaria.js"></script>
+  <script src='https://unpkg.com/scroll-out/dist/scroll-out.min.js'></script>
+  <script src="js/nav-scroll.js"></script>
+
+</body>
+
+</html>
