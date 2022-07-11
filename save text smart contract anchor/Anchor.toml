@@ -1,0 +1,12 @@
+[programs.devnet]
+messengerapp = "3qKUMYEjXm9sKMezDvex9r9jLbMUsuke8K1zTf81dyHa"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "devnet"
+wallet = "/root/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"

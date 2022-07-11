@@ -1,0 +1,12 @@
+[programs.localnet]
+blog = "3rXpMjyxn8Cso51HnJiWX9sqfJhDfexQfEE94kT6iHUc"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "https://api.devnet.solana.com"
+wallet = "/home/alex/validator-keypair.json"
+
+[scripts]
+test = "mocha -t 1000000 tests/"
